@@ -4,17 +4,6 @@ const ms = "ms";
 const db = require("wio.db");
 const client = new Discord.Client();
 const { Default_Prefix, Token, Support, Color } = require("./config.js");
-const http = require("http");
-const express = require("express");
-const app = express();
-app.get("/", (request, response) => {
-  response.sendStatus(200);
-});
-app.listen(process.env.PORT);
-setInterval(() => {
-  http.get(`http://music-2004-js.glitch.me/`);
-}, 280000)
-
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
